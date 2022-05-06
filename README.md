@@ -6,3 +6,11 @@
 <p align="center">
   <img src="./images/molecule.gif">
 </p>
+
+## Leaderboard
+
+<p align="center">
+  <a herf="https://www.kaggle.com/competitions/molecular-energy-estimation-rucode/leaderboard">
+    <img src="./images/kaggle.png">
+  </a>
+</p>
