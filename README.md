@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://nomomon.github.io/images/rucode-5.0-preview.gif" width="2000">
+</p>
+
 # Molecule energy RuCode 5.0
 
 - [My solution (explanation)](https://www.youtube.com/watch?v=jGRQjQZg4Ck&t=8577s)
