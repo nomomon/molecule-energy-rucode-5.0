@@ -1,4 +1,4 @@
-# rucode 5.0
+# Molecule energy RuCode 5.0
 
 - [My solution (explanation)](https://www.youtube.com/watch?v=jGRQjQZg4Ck&t=8577s)
 - [Results](https://www.youtube.com/watch?v=jGRQjQZg4Ck&t=11308s)
