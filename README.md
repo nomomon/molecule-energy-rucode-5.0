@@ -4,14 +4,33 @@
 
 # Molecule energy RuCode 5.0
 
-- [My solution (explanation)](https://www.youtube.com/watch?v=jGRQjQZg4Ck&t=8577s)
-- [Results](https://www.youtube.com/watch?v=jGRQjQZg4Ck&t=11308s)
+## Problem
+
+### Description
+
+The chemical and physical properties of a molecule are determined not only by the structural formula, but also by its three-dimensional realization. An important task in the search for possible three-dimensional realizations (conformations) of molecules is the estimation of their energies.
+
+One proven approach for predicting conformational energies and other chemical and physical properties is the use of GNNs (Graphed Neural Networks) [[Schrödinger network](https://arxiv.org/abs/1706.08566), [Directional Message Passing for Molecular Graphs](https://arxiv.org/abs/2003.03123)].
+
+In this competition, you need to learn how to predict energy from a three-dimensional representation of a molecule. You will be given a set of conformations for a subsample of molecules from the [MOSES](https://github.com/molecularsets/moses) dataset. For some of the conformations, the energy value will also be given.
+
+### Evaluation
+
+Evaluation metric – [MAE](https://en.wikipedia.org/wiki/Mean_absolute_error).
+
+### My solution
+
+You can listen to my solution on the [livestream](https://www.youtube.com/watch?v=jGRQjQZg4Ck&t=8577s) (only in russian).
+
+**[WIP]**
 
 <p align="center">
   <img src="./images/molecule.gif">
 </p>
 
 ## Leaderboard
+
+Results of the competition can be watched on the [livestream](https://www.youtube.com/watch?v=jGRQjQZg4Ck&t=11308s) (only in russian).
 
 <a href="https://www.kaggle.com/competitions/molecular-energy-estimation-rucode/leaderboard">
   
