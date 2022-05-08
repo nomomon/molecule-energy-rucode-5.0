@@ -18,7 +18,7 @@ In this competition, you need to learn how to predict energy from a three-dimens
 
 Evaluation metric – [MAE](https://en.wikipedia.org/wiki/Mean_absolute_error).
 
-### My solution
+## My solution
 
 You can listen to my solution on the [livestream](https://www.youtube.com/watch?v=jGRQjQZg4Ck&t=8577s) (only in russian).
 
