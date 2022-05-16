@@ -1,3 +1,6 @@
+_Work on this project is continued in this [repository](https://github.com/nomomon/molecule-energy-prediction)._
+***
+
 <p align="center">
   <img src="https://nomomon.github.io/images/rucode-5.0-preview.gif" width="2000">
 </p>
