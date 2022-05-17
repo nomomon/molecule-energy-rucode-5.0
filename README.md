@@ -28,6 +28,19 @@ jupyter notebook "rucode_5_(Molecule).ipynb"
 
 Or open in [Google Colab](https://colab.research.google.com/).
 
+## Achievements
+
+<p align="center">
+  <img src="./images/rucode5-prize-winner.jpeg" width="24%" />
+  <img src="./images/rucode5-participation-certificate.jpeg" width="24%" />
+  <img src="./images/rucode5-extra-certificate-1.jpeg" width="24%" />
+  <img src="./images/rucode5-extra-certificate-2.jpeg" width="24%" />
+</p>
+
+## Leaderboard
+
+[![Kaggle Leaderboard](./images/kaggle.png)](https://www.kaggle.com/competitions/molecular-energy-estimation-rucode/leaderboard)
+
 ## Story
 
 This started as a hackathon entry and turned into actual research. The RuCode 5.0 experience was one of the things that got me into ML competitions — it directly inspired me to later organize the [Groningen Machine Learning Month](https://nomomon.github.io/posts/2022-12-20-gmlm/) at my university.
