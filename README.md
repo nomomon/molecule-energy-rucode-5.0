@@ -1,50 +1,31 @@
-_Work on this project is continued in this [repository](https://github.com/nomomon/molecule-energy-prediction)._
-***
+# Molecule Energy Estimator
 
-<p align="center">
-  <img src="https://nomomon.github.io/images/rucode-5.0-preview.gif" width="2000">
-</p>
+Predicting molecular energies from 3D conformations using neural networks. Built for the RuCode 5.0 hackathon.
 
-# Molecule energy RuCode 5.0
+## What's this about
 
-## Problem
+The chemical and physical properties of a molecule depend not just on its structural formula but on its conformation — where atoms sit in 3D space. Estimating molecular energies is important, but methods like DFT are computationally expensive. This project uses neural networks to do it faster.
 
-### Description
+The problem and data came from the [Artificial Intelligence Research Institute](https://airi.net/) as part of [RuCode 5.0](https://rucode.net/), using molecules from the [MOSES](https://github.com/molecularsets/moses) dataset.
 
-The chemical and physical properties of a molecule are determined not only by the structural formula, but also by its three-dimensional realization. An important task in the search for possible three-dimensional realizations (conformations) of molecules is the estimation of their energies.
+### The approach
 
-One proven approach for predicting conformational energies and other chemical and physical properties is the use of GNNs (Graphed Neural Networks) [[Schrödinger network](https://arxiv.org/abs/1706.08566), [Directional Message Passing for Molecular Graphs](https://arxiv.org/abs/2003.03123)].
+1. Assume kinetic energy is zero (no movement data). Focus on potential energy as the sum of bond energies.
+2. For each pair of atoms, check if a bond exists based on distance.
+3. Count bond types and feed them into a neural network that learns bond energies.
 
-In this competition, you need to learn how to predict energy from a three-dimensional representation of a molecule. You will be given a set of conformations for a subsample of molecules from the [MOSES](https://github.com/molecularsets/moses) dataset. For some of the conformations, the energy value will also be given.
+This got **7th place** in the competition. You can hear the solution explained on the [livestream](https://www.youtube.com/watch?v=jGRQjQZg4Ck&t=8577s) (in Russian).
 
-### Evaluation
+Work continued in a [separate repo](https://github.com/nomomon/molecule-energy-prediction) with a deeper dive — turns out bond energy isn't constant, it has discrete energy levels. Used a constraint satisfaction solver to determine them, which improved results. Full [research report here](https://nomomon.github.io/molecule-energy-prediction/report/report.pdf).
 
-Evaluation metric – [MAE](https://en.wikipedia.org/wiki/Mean_absolute_error).
+## How to launch
 
-## My solution
+```bash
+jupyter notebook "rucode_5_(Molecule).ipynb"
+```
 
-You can listen to my solution on the [livestream](https://www.youtube.com/watch?v=jGRQjQZg4Ck&t=8577s) (only in russian).
+Or open in [Google Colab](https://colab.research.google.com/).
 
-**[WIP]**
+## Story
 
-<p align="center">
-  <img src="./images/molecule.gif">
-</p>
-
-## Leaderboard
-
-Results of the competition can be watched on the [livestream](https://www.youtube.com/watch?v=jGRQjQZg4Ck&t=11308s) (only in russian).
-
-<a href="https://www.kaggle.com/competitions/molecular-energy-estimation-rucode/leaderboard">
-  
-  ![Kaggle Badge][kaggle-badge]
-
-  <p align="center">
-      <img src="./images/kaggle.png">
-  </p>
-</a>
-
-## License
-All of the codebase is **MIT Licensed** unless otherwise stated.
-
-[kaggle-badge]: https://img.shields.io/badge/kaggle-leaderboard-blue?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAzNJREFUaEPtmktrE1EUgL8ziQqCL9qFImgi6kbBhV2KNY+2thtdiC4UFV8griru3LjwB7iqqOjC+loIorhQaBO0vvCFiCBI2iT1rRWxIFjT3iOpxUUz0Ux6Z2whd31n5vvOOXPuvZMIU3zIFOfHk8DytNYXlHZVQn/EBRMKcby3UV7/j2B4EoiktAW4MR5UYWs+LhemroCwLR+T8zWBKiJgp4RqGagi9GOX1DJQDITWSqhWQpVFoOxCViuhygLoNqvWhWpdqPrqGb0y8BKKduteIxwSCJewC9dyMWn34hSoQBFe4QRSGjiFbxha80m5PykFomndo4aTbvAoXwXWZxPy0At8YCW0OKW7BE4Bjsth6JNjaMom5blX+EAE/gaP8iHk0NQbkxfVwPsuEEnrTpTTZSLfHxYSvTHJVAvvq0AkrTtQzrjBo+SMkuhPSt9E4H0TiKR1ixrOiZS2SoVX04REJiZvJgrvi0A0pZuNct4NHuXlyAjJ183yzga8dYFoWjcZw0VXeMOz8HSaM2vlsy14qwIODJWFhycFQ8vbpHyxCW9PQLkMbHSLvCh3Q0O0Zdpk0Da8NYFyYKoMi8OyXExyfsD7LjC61YY79bOJP2mQgh8SVjZz/wQTjnndZf7znmMTghH4nYnd+bgUFzarw6qAMVx1HJYCK0oolR+OsrYvKY9sGtgTUC7VzWH71+9EzDAPEeaWgBrejxgaJt9CBp352+zkiJgidCSlG1CuuO79hZ66WSRsvdRWMuD2aTHarUdVOOxWLmLoyCblgI1S8k2AI+pEGrmO0uoqoezLJqR4yJnQ8E8AWNSj85wCj4El4ylVKThKIpuUnokY+CpQBIumdJXCPWCmS2f6MAwNbxLytloJ3wVGJdK6TZVOV0jDg/BP1mXaZKgaiUAExjpTB7C/DOTZXFx2TGqB1Y912sAgKYE1bqAKB/JxKUp6GoFlYDQLaZ3PCE9xWOD2UovQlIvLLS8GngSi3dqsws2Sh3v4oTuS0kZVusqclz/OEFa+islApRKeBBZ2ad10h4Pj/2oQFjq8HNIXd2urQKMbpGPo6GuSfl8EKr1pkPM8ZSBIsEqf9QucsNtAONWukwAAAABJRU5ErkJggg==
+This started as a hackathon entry and turned into actual research. The RuCode 5.0 experience was one of the things that got me into ML competitions — it directly inspired me to later organize the [Groningen Machine Learning Month](https://nomomon.github.io/posts/2022-12-20-gmlm/) at my university.
