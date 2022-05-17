@@ -1,5 +1,7 @@
 # Molecule Energy Estimator
 
+![banner](./assets/banner.gif)
+
 Predicting molecular energies from 3D conformations using neural networks. Built for the RuCode 5.0 hackathon.
 
 ## What's this about
